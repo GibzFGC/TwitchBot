@@ -8,7 +8,7 @@ A smaller Twitch Bot based on my Twitch Channels bot.
 ## SQLite Setup
 You will need to create a SQLite file for the program to use in the root/Data folder.
 
-You will need a SQLite editor. I use SQLite Manager (https://addons.mozilla.org/en-GB/firefox/addon/sqlite-manager/) which I've added to Firefox for ease of use and quick editing.
+You will need a SQLite editor. I use SQLite Manager (https://addons.mozilla.org/en-GB/firefox/addon/sqlite-manager/) which I've added to Firefox for ease of use and quick editing but there are many options out there for you to choose from.
 
 Create a new SQLite database and name the file TwitchBot.sqlite. Add one new table called "twitchbot_commands". From there, add two columns called "command"
 and "value"
