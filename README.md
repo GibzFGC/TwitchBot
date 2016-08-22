@@ -3,6 +3,7 @@ A smaller Twitch Bot based on my Twitch Channels bot.
 
 ## Prerequisites:
 - Visual Studio 2015 Community Edition (Written in VB.NET)
+- .Net Framework 4.5.2
 - SQLite .NET (https://www.nuget.org/profiles/mistachkin)
 
 ## SQLite Setup
