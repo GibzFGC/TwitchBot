@@ -6,6 +6,16 @@ A smaller Twitch Bot based on my Twitch Channels bot.
 - SQLite .NET (https://www.nuget.org/profiles/mistachkin)
 
 ## SQLite Setup
+
+### Quick Setup:
+When you've opened the solution in Visual Studio, head straight to Tools > NuGet Package Manager > Manage NuGet Packages for Solution.
+
+In here, choose the "Browse" tab and in the search box look for SQLite. You're looking for System.Data.SQLite, the official Database Engine.
+
+Click it, on the right tick your project and choose install. As of writing, it's on version 1.0.102.
+
+
+### Creating the SQLite file:
 You will need to create a SQLite file for the program to use in the root/Data folder.
 
 You will need a SQLite editor. I use SQLite Manager (https://addons.mozilla.org/en-GB/firefox/addon/sqlite-manager/) which I've added to Firefox for ease of use and quick editing but there are many options out there for you to choose from.
