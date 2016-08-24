@@ -56,29 +56,38 @@ Public Class TwitchForm
             Try
 
                 Dim message As String = IRCClient.readMessage()
-                Dim cleanfunc As String = message.Substring(message.LastIndexOf(":!") + 1)
+                AddtoList(message)
 
-                AddtoList(cleanfunc)
+                ' Verify bot is still active with Twitch
+                If message = "PING :tmi.twitch.tv" Then
+                    sendIrcMessage("PONG :tmi.twitch.tv")
+                    AddtoList("PONG :tmi.twitch.tv")
+                End If
 
-                ' Database Checks
-                If cleanfunc.Contains("!") Then
+                If message.Contains(":") Then
+                    Dim cleanfunc As String = message.Substring(message.LastIndexOf(":") + 1)
 
-                    Dim SQLcommand1 As SQLiteCommand
+                    If (cleanfunc.Contains("!")) Then
 
-                    SQLcommand1 = SQLconnect.CreateCommand
-                    SQLcommand1.CommandText = "SELECT * FROM twitchbot_commands WHERE command = @command"
+                        ' Database Checks
+                        Dim SQLcommand1 As SQLiteCommand
 
-                    Dim commandstring As SQLiteParameter = New SQLiteParameter("@command")
-                    SQLcommand1.Parameters.Add(commandstring)
-                    commandstring.Value = cleanfunc
+                        SQLcommand1 = SQLconnect.CreateCommand
+                        SQLcommand1.CommandText = "SELECT * FROM twitchbot_commands WHERE command = @command"
 
-                    Dim sqlreader1 As SQLiteDataReader = SQLcommand1.ExecuteReader()
+                        Dim commandstring As SQLiteParameter = New SQLiteParameter("@command")
+                        SQLcommand1.Parameters.Add(commandstring)
+                        commandstring.Value = message
 
-                    While sqlreader1.Read()
-                        IRCClient.sendChatMessage(sqlreader1("value"))
-                    End While
+                        Dim sqlreader1 As SQLiteDataReader = SQLcommand1.ExecuteReader()
 
-                    SQLcommand1.Dispose()
+                        While sqlreader1.Read()
+                            IRCClient.sendChatMessage(sqlreader1("value"))
+                        End While
+
+                        SQLcommand1.Dispose()
+
+                    End If
 
                 End If
 
