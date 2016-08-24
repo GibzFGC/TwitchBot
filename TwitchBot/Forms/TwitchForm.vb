@@ -35,7 +35,7 @@ Public Class TwitchForm
             IRCClient.joinRoom(twitchChannel)
         End If
 
-        IRCClient.sendChatMessage("TwitchBot is alive!")
+        IRCClient.sendChatMessage(My.Settings.BotName + " is alive!")
 
         ' New Thread
         commandThread = New Thread(AddressOf StartParam)
@@ -78,7 +78,7 @@ Public Class TwitchForm
 
                         Dim commandstring As SQLiteParameter = New SQLiteParameter("@command")
                         SQLcommand1.Parameters.Add(commandstring)
-                        commandstring.Value = message
+                        commandstring.Value = cleanfunc
 
                         Dim sqlreader1 As SQLiteDataReader = SQLcommand1.ExecuteReader()
 
