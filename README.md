@@ -28,7 +28,7 @@ Then, just add your commands without the "!". So, as an example. Command: "hello
 in chat,
 
 ## Features
-- New: right-click context menu (allows bot naming, erasing of account data).
+- New: Right-click context menu (allows bot naming, erasing of account data).
 
 ## Bugs & Fixes
 ### 24th August 2016
