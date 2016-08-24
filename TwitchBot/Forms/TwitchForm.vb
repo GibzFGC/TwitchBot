@@ -1,4 +1,5 @@
-﻿Imports System.Data.SQLite
+﻿Imports System.ComponentModel
+Imports System.Data.SQLite
 Imports System.Threading
 
 Public Class TwitchForm
@@ -111,4 +112,36 @@ Public Class TwitchForm
         End If
     End Sub
 
+    Private Sub DeleteAccount1_Click(sender As Object, e As EventArgs) Handles DeleteAccount1.Click
+
+        My.Settings.BotName = "TwitchBot"
+        My.Settings.TwitchUser = ""
+        My.Settings.TwitchOAuth = ""
+        My.Settings.TwitchChannel = ""
+        My.Settings.TwitchRemember = False
+
+        My.Settings.Save()
+
+    End Sub
+
+    Private Sub SetBotName1_Click(sender As Object, e As EventArgs) Handles SetBotName1.Click
+
+        Dim myBotName As New BotName
+        myBotName.Show()
+
+    End Sub
+
+    Private Sub Exit1_Click(sender As Object, e As EventArgs) Handles Exit1.Click
+
+        SQLconnect.Close()
+        Application.Exit()
+
+    End Sub
+
+    Private Sub TwitchForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+
+        SQLconnect.Close()
+        Application.Exit()
+
+    End Sub
 End Class

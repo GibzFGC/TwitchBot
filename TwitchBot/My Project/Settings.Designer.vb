@@ -101,6 +101,18 @@ Namespace My
                 Me("TwitchRemember") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("TwitchBot")>  _
+        Public Property BotName() As String
+            Get
+                Return CType(Me("BotName"),String)
+            End Get
+            Set
+                Me("BotName") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

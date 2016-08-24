@@ -14,5 +14,8 @@
     <Setting Name="TwitchRemember" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="BotName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">TwitchBot</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
