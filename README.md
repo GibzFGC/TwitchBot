@@ -27,6 +27,14 @@ and "value"
 Then, just add your commands without the "!". So, as an example. Command: "hello" and Value: "Hi there!" will make !hello work
 in chat,
 
+## Features
+- New right-click context menu (allows bot naming, erasing of account data).
+
+## Bugs & Fixes
+### 24th August 2016
+- Fixed: Better application closing handling.
+- Fixed: Special characters crashing the application.
+
 ## Plans?
 This can be extended heavily depending on if people think it would be useful. I always appreciate feedback.
 
