@@ -33,6 +33,7 @@ in chat,
 ## Bugs & Fixes
 ### 24th August 2016
 - Fixed: Better application closing handling.
+- Fixed: Now completes the ping-pong test with the Twitch servers to verify the bot is still active.
 - Fixed: Special characters crashing the application.
 
 ## Plans?
