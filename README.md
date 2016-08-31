@@ -29,6 +29,8 @@ Then, just add your commands without the "!". So, as an example. Command: "hello
 in chat,
 
 ## Features
+- New: Take logs of your chat so you can save those awesome moments in commands, etc!
+- New: Add and Delete Commands directly through the application.
 - New: Right-click context menu (allows bot naming, erasing of account data).
 
 ## Plans?
