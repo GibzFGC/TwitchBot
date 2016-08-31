@@ -16,7 +16,6 @@ In here, choose the "Browse" tab and in the search box look for SQLite. You're l
 
 Click it, on the right tick your project and choose install. As of writing, it's on version 1.0.102.
 
-
 ### Creating the SQLite file:
 You will need to create a SQLite file for the program to use in the root/Data folder.
 
@@ -27,6 +26,11 @@ and "value"
 
 Then, just add your commands without the "!". So, as an example. Command: "hello" and Value: "Hi there!" will make !hello work
 in chat,
+
+## How Do I Connect the Bot to Twitch?
+If you haven't done so already, you'll need to create a seperate bot account on Twitch. Then you'll need to generate an OAuth key for use in the bot.
+
+You can generate this key by going to http://www.twitchapps.com/tmi/ and logging in as the Twitch Bot.
 
 ## Features
 - New: Take logs of your chat so you can save those awesome moments in commands, etc!
