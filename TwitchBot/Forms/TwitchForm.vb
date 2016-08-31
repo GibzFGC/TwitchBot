@@ -1,5 +1,6 @@
 ﻿Imports System.ComponentModel
 Imports System.Data.SQLite
+Imports System.IO
 Imports System.Threading
 
 Public Class TwitchForm
@@ -122,6 +123,8 @@ Public Class TwitchForm
 
         My.Settings.Save()
 
+        MsgBox("Account data successfully erased.")
+
     End Sub
 
     Private Sub SetBotName1_Click(sender As Object, e As EventArgs) Handles SetBotName1.Click
@@ -142,6 +145,54 @@ Public Class TwitchForm
 
         SQLconnect.Close()
         Application.Exit()
+
+    End Sub
+
+    Private Sub SaveLog1_Click(sender As Object, e As EventArgs) Handles SaveLog1.Click
+
+        If SaveLogDialog1.ShowDialog() = DialogResult.OK Then
+
+            Dim SaveFile As New StreamWriter(SaveLogDialog1.OpenFile)
+            For Each item As String In TwitchData1.Items
+                SaveFile.WriteLine(item)
+            Next
+
+            SaveFile.Close()
+
+        End If
+
+    End Sub
+
+    Private Sub CommandsBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CommandsBox1.SelectedIndexChanged
+
+        If CommandsBox1.SelectedIndex = 2 Then
+            Dim CreateCommand As New AddaCommand
+            CreateCommand.Show()
+        End If
+
+        If CommandsBox1.SelectedIndex = 3 Then
+            Dim DeleteCommand As New DeleteaCommand
+            DeleteCommand.Show()
+        End If
+
+        If CommandsBox1.SelectedIndex = 5 Then
+            Dim RenameBot As New BotName
+            RenameBot.Show()
+        End If
+
+        If CommandsBox1.SelectedIndex = 7 Then
+            My.Settings.BotName = "TwitchBot"
+            My.Settings.TwitchUser = ""
+            My.Settings.TwitchOAuth = ""
+            My.Settings.TwitchChannel = ""
+            My.Settings.TwitchRemember = False
+
+            My.Settings.Save()
+
+            MsgBox("Account data successfully erased.")
+        End If
+
+        CommandsBox1.SelectedIndex = 0
 
     End Sub
 End Class

@@ -105,10 +105,22 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\AddaCommand.Designer.vb">
+      <DependentUpon>AddaCommand.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddaCommand.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\BotName.Designer.vb">
       <DependentUpon>BotName.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\BotName.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DeleteaCommand.Designer.vb">
+      <DependentUpon>DeleteaCommand.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DeleteaCommand.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modules\IRCClient.vb" />
@@ -138,8 +150,14 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddaCommand.resx">
+      <DependentUpon>AddaCommand.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\BotName.resx">
       <DependentUpon>BotName.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeleteaCommand.resx">
+      <DependentUpon>DeleteaCommand.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TwitchForm.resx">
       <DependentUpon>TwitchForm.vb</DependentUpon>
