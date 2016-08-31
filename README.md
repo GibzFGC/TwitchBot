@@ -5,6 +5,7 @@ A smaller Twitch Bot based on my Twitch Channels bot.
 - Visual Studio 2015 Community Edition (Written in VB.NET)
 - .Net Framework 4.5.2
 - SQLite .NET (https://www.nuget.org/profiles/mistachkin)
+- An SQLite Database Editor (like http://sqlitebrowser.org)
 
 ## SQLite Setup
 
@@ -19,7 +20,7 @@ Click it, on the right tick your project and choose install. As of writing, it's
 ### Creating the SQLite file:
 You will need to create a SQLite file for the program to use in the root/Data folder.
 
-You will need a SQLite editor. I use SQLite Manager (https://addons.mozilla.org/en-GB/firefox/addon/sqlite-manager/) which I've added to Firefox for ease of use and quick editing but there are many options out there for you to choose from.
+You will need a SQLite editor. I use SQLite Manager (http://sqlitebrowser.org) mentioned in the prerequisites above for ease of use and quick editing but there are many options out there for you to choose from.
 
 Create a new SQLite database and name the file TwitchBot.sqlite. Add one new table called "twitchbot_commands". From there, add two columns called "command"
 and "value"
