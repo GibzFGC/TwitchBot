@@ -1,3 +1,5 @@
+# THIS DOESN'T WORK ANY MORE, IT'S HERE FOR HISTORICAL REASONS AND MAY BE DELETED AT ANY TIME!
+
 # TwitchBot
 A smaller Twitch Bot based on my Twitch Channels bot.
 
